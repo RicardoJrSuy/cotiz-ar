@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotización</title>
+    <link rel="stylesheet" href="cotizstyles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+        @media print {
+            #imprimir-cotizacion {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="invoice-container" id="cotizacion">
+        <header class="invoice-header">
+            <div class="header-logo">
+                <img src="Imagenes/A&R ELECTRONICS SRL recortado.png" alt="Logo A&R Electronics" />
+            </div>
+        </header>
+        <div class="datos-ar">
+            <img src="Imagenes/W2S130-AA03-97 ebmpapst.jpg" alt="Ventilador 1" class="imagen-ventilador">
+            <p class="texto-entre-imagenes">
+                <strong class="RUC">RUC: 20268832026</strong> <br>
+                <strong class="RUC">IMPORTACIÓN Y DISTRIBUCIÓN DE:</strong> <br>
+                COMPONENTES ELECTRÓNICOS Y ELÉCTRICOS EN GENERAL: CONDENSADORES, AUDIO PARTES, CABLES, CIRCUITOS INTEGRADOS, TRANSISTORES, IGBT's, DIODOS, TIRISTORES FUSIBLES, SEÑALIZACIÓN, FERRETERÍA Y REPUESTOS INDUSTRIALES EN GENERAL. <br>
+                <strong class="RUC">AV. TACNA No. 592 OF-44A LIMA</strong> <strong class="CEL">CEL: 997919409</strong>
+                <br> <strong class="RUC">E-MAIL: VENTAS@ARELECTRONI.COM / RICARDOSUY@HOTMAIL.COM</strong>
+            </p>
+            <img src="Imagenes/7214N EBMPAPST.jpg" alt="Ventilador 2" class="imagen-ventilador">
+        </div>   
+        <section class="invoice-info">
+            <div class="client-info">
+                <p><strong>Cliente:</strong> <span id="cliente"></span></p>
+                <p><strong>Dirección:</strong> <span id="direccion-cliente"></span></p>
+                <p><strong>Teléfono:</strong> </p>
+            </div>
+            <div class="invoice-details">
+                <p><strong>Número de Cotización:</strong> <span id="numero-cotizacion"></span></p>
+                <p><strong>Fecha:</strong> <span id="fecha-cotizacion"></span></p>
+            </div>
+        </section>
+
+        <table class="invoice-table">
+            <thead>
+                <tr>
+                    <th>Descripción del Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio Unitario</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-productos">
+                <!-- Las filas de productos se agregarán aquí -->
+            </tbody>
+        </table>
+
+        <div class="totals">
+            <p><strong>SUBTOTAL:</strong> <span id="subtotal"></span></p>
+            <p><strong>IGV (18%):</strong> <span id="igv"></span></p>
+            <p class="grand-total"><strong>Total:</strong> <span id="total"></span></p>
+        </div>
+
+        <div class="terms">
+            <p><strong>Términos & Condiciones:</strong></p>
+            <p>El pago debe realizarse dentro de los 30 días siguientes a la recepción de la factura. El retraso en el pago puede generar intereses.</p>
+        </div>
+<br>
+<br>
+<br>
+<br>
+        <div class="signature">
+            <div class="signature-line"></div>
+            <p>Firma</p>
+            
+        </div>
+
+        <div class="button-container">
+            <button id="imprimir-cotizacion">Imprimir Cotización</button>
+            <button id="guardar-pdf">Guardar como PDF</button>
+        </div>
+    </div>
+
+    <script src="cotiz.js"></script>
+</body>
+</html>

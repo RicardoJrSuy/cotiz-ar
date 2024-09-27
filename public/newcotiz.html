@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotización</title>
+    <link rel="stylesheet" href="cotizstyles.css">
+</head>
+<body>
+    <div class="invoice-container">
+        <header class="invoice-header">
+            <div class="header-logo">
+                <img src="Imagenes/Logo-1.png" alt="Logo Empresa">
+            </div>
+            <div class="invoice-title">
+                <h1>COTIZACIÓN</h1>
+            </div>
+        </header>
+
+        <section class="invoice-info">
+            <div class="client-info">
+                <p><strong>Cliente:</strong> John Doe</p>
+                <p><strong>Empresa:</strong> Compañía XYZ</p>
+                <p><strong>Teléfono:</strong> +51 999999999</p>
+                <p><strong>Email:</strong> cliente@correo.com</p>
+            </div>
+            <div class="invoice-details">
+                <p><strong>Número de Cotización:</strong> 000123</p>
+                <p><strong>Fecha:</strong> 25/09/2023</p>
+            </div>
+        </section>
+
+        <table class="invoice-table">
+            <thead>
+                <tr>
+                    <th>Descripción del Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio Unitario</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Diseño Web</td>
+                    <td>2</td>
+                    <td>S/ 500.00</td>
+                    <td>S/ 1000.00</td>
+                </tr>
+                <tr>
+                    <td>Desarrollo Web</td>
+                    <td>1</td>
+                    <td>S/ 1500.00</td>
+                    <td>S/ 1500.00</td>
+                </tr>
+                <tr>
+                    <td>Consultoría Técnica</td>
+                    <td>3</td>
+                    <td>S/ 300.00</td>
+                    <td>S/ 900.00</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="totals">
+            <p><strong>Subtotal:</strong> S/ 3400.00</p>
+            <p><strong>IGV (18%):</strong> S/ 612.00</p>
+            <p class="grand-total"><strong>Total:</strong> S/ 4012.00</p>
+        </div>
+
+        <div class="terms">
+            <p><strong>Términos & Condiciones:</strong></p>
+            <p>El pago debe realizarse dentro de los 30 días siguientes a la recepción de la factura. El retraso en el pago puede generar intereses.</p>
+        </div>
+
+        <div class="signature">
+            <p>Firma Autorizada</p>
+            <div class="signature-line"></div>
+        </div>
+
+    </div>
+
+    <button id="imprimir-cotizacion">Imprimir Cotización</button>
+
+    <script>
+        // Función para imprimir la cotización
+        document.getElementById('imprimir-cotizacion').addEventListener('click', function() {
+            window.print();
+        });
+    </script>
+</body>
+</html>

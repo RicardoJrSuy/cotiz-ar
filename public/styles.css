@@ -1,0 +1,198 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4faff; /* Fondo más claro */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    background-color: #003366; /* Azul marino */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más fuerte */
+    font-size: 26px; /* Fuente más grande */
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+h1, h2 {
+    margin: 0;
+    font-weight: bold;
+}
+
+main {
+    background-color: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra elegante */
+    max-width: 800px;
+    margin: 30px auto; /* Centrar y más espacio */
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #003366; /* Azul marino */
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc; /* Borde gris suave */
+    border-radius: 6px;
+    margin-top: 8px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px; /* Texto más grande */
+}
+
+/* Efecto de enfoque */
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+    border-color: #007bff; /* Azul brillante en el foco */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Sombra en el foco */
+    outline: none;
+}
+
+button {
+    background-color: #007bff; /* Azul brillante */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+    box-shadow: 0 3px 8px rgba(0, 123, 255, 0.2);
+}
+
+/* Efecto hover */
+button:hover {
+    background-color: #00509e; /* Azul más oscuro al pasar el mouse */
+    box-shadow: 0 4px 10px rgba(0, 80, 158, 0.3); /* Sombra en hover */
+}
+
+#resultado {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e7f3fe; /* Fondo claro para el resultado */
+    border-left: 5px solid #007bff; /* Azul brillante para el borde */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    font-size: 16px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro translúcido */
+    backdrop-filter: blur(5px); /* Desenfoque */
+    transition: opacity 0.3s ease; /* Transición suave */
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 30px;
+    border: 1px solid #ddd;
+    width: 50%; /* Ajusta el ancho del modal */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra más marcada */
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+/* Efecto de cierre del modal */
+.modal.fade-out .modal-content {
+    transform: translateY(-50px);
+    opacity: 0;
+}
+
+/* Estilo de la tabla de productos */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 16px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Sombra en la tabla */
+    border-radius: 8px;
+    overflow: hidden; /* Bordes redondeados */
+}
+
+.styled-table thead {
+    background-color: #007bff;
+    color: white;
+}
+
+.styled-table th, .styled-table td {
+    padding: 14.999px;
+    border-bottom: 1px solid #ddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f9f9f9;
+}
+.boton-final{
+    display:flex;
+    align-content: center;
+    justify-content: center;
+    }
+
+/* Barra celeste (footer) */
+.footer-bar {
+    background-color: #003366;
+    color: white;
+    padding: 15px;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    font-size: 14px;
+}
+/* Ajustar el tamaño del selector de moneda */
+#moneda {
+    font-size: 16px; /* Aumentar el tamaño de la fuente */
+    padding: 8px 10px; /* Aumentar el padding para que sea más interactivo */
+    width: 200px; /* Ampliar el ancho del selector */
+    border-radius: 10px;
+}
+@media (max-width: 600px) {
+    .styled-table th, .styled-table td {
+        
+            font-size: 10px;  /* Ajustar el tamaño de la fuente */
+    }
+
+    .styled-table thead th {
+        white-space: nowrap;  /* Evitar que el texto de los encabezados se salga */
+    }
+
+    .styled-table {
+        overflow-x: auto;  /* Habilitar el desplazamiento horizontal */
+        display: block;    /* Forzar que la tabla se mantenga dentro del contenedor */
+    }
+
+
+}

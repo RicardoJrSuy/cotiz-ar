@@ -1,0 +1,263 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.invoice-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.invoice-header {
+    text-align: center;
+    margin-bottom: 0%;
+}
+
+.header-logo {
+    display: block;
+    margin: 0%;
+}
+
+.header-logo img {
+    max-width: 60%;
+    height: auto;
+}
+
+.invoice-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.client-info,
+.invoice-details {
+    width: 48%;
+}
+
+strong {
+    color: #333;
+    font-size: 14px;
+}
+
+.invoice-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.invoice-table thead th {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.invoice-table tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.invoice-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.totals {
+    margin-top: 30px;
+}
+
+.totals p {
+    font-size: 1.2em;
+    margin: 5px 0;
+    text-align: right;
+}
+
+.grand-total {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: red;
+}
+
+.terms {
+    font-size: 0.9em;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.signature {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.signature-line {
+    width: 200px;
+    margin: 0 auto;
+    border-bottom: 1px solid #000;
+    margin-top: 20px;
+}
+.button-container {
+    display: flex;
+    justify-content: center; /* Centramos los botones */
+    gap: 20px; /* Espacio entre los botones */
+    margin-top: 20px; /* Añadimos un pequeño margen superior */
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Ajuste de las imágenes de los ventiladores */
+.datos-ar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.imagen-ventilador {
+    max-width: 100px;
+    height: auto;
+    margin: 0%;
+}
+
+.texto-entre-imagenes {
+    flex: 1;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    margin: 0%;
+}
+
+.RUC {
+    color: #0056b3;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.CEL {
+    color: red;
+    font-size: 14px;
+}
+
+/* Estilos específicos para la impresión */
+/* Estilos específicos para la impresión */
+/* Estilos específicos para la impresión */
+@media print {
+    body {
+        background-color: white;
+        font-size: 12px; /* Reducir un poco el tamaño de fuente para que todo encaje mejor */
+    }
+
+    .invoice-container {
+        max-width: 100%; /* Asegurar que la factura use todo el ancho disponible */
+        margin: 0; /* Eliminar márgenes para que no se agregue espacio en la impresión */
+        padding: 0; /* Eliminar relleno adicional */
+        box-shadow: none; /* Eliminar sombras en la impresión */
+    }
+
+    .header-logo img {
+        max-width: 100%; /* Ajustar el tamaño del logo */
+        margin: 0 auto; /* Centrar el logo */
+    }
+
+    .invoice-table {
+        width: 100%; /* Asegurar que la tabla ocupe todo el ancho disponible */
+        font-size: 12px; /* Asegurar que el texto de la tabla se ajuste correctamente */
+        border-collapse: collapse; /* Asegurar que la tabla no se vea desordenada */
+    }
+
+    .invoice-table th {
+        background-color: #007bff !important; /* Forzar el color de fondo en la impresión */
+        color: white !important; /* Forzar el color de texto en la impresión */
+        padding: 10px;
+        text-align: left;
+        border: 1px solid #ddd; /* Agregar un borde en la impresión */
+    }
+
+    .invoice-table td {
+        border: 1px solid #ddd; /* Agregar borde a las celdas en la impresión */
+        padding: 8px;
+    }
+
+    .totals {
+        margin-top: 30px;
+    }
+
+    .signature {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .terms {
+        margin-top: 30px;
+    }
+
+    #imprimir-cotizacion,
+    #guardar-pdf {
+        display: none !important; /* Ocultar botones durante la impresión */
+    }
+
+    /* Ajustar el zoom para evitar que los elementos se corten */
+    body {
+        zoom: 95%; /* Reducir ligeramente el zoom para que todo encaje en la página */
+    }
+
+    /* Ajustar márgenes de página en la impresión */
+    @page {
+        margin: 10mm; /* Controlar los márgenes de la página para que el contenido no se corte */
+    }
+
+    /* Asegurarse de que los colores de fondo se impriman */
+    * {
+        -webkit-print-color-adjust: exact !important; /* Forzar la impresión de colores en Chrome y Safari */
+        print-color-adjust: exact !important; /* Forzar la impresión de colores en otros navegadores */
+    }
+}
+
+
+/* Estilo para evitar escalado en móviles */
+@media screen and (max-width: 600px) {
+    .datos-ar img{
+        max-width:15%;
+        height: auto;
+    }
+    .datos-ar p {
+        font-size: 10px; /* Reducir el tamaño del texto en móviles */
+    }
+    .RUC,.CEL{
+        font-size: 10px;
+    }
+    body {
+        font-size: 12px;
+    }
+
+    .invoice-container {
+        padding: 10px;
+    }
+    .button-container {
+        align-items: center;
+        flex-direction: column; /* En pantallas pequeñas, los botones se apilarán uno sobre otro */
+        gap: 10px; /* Reducir el espacio entre botones en móvil */
+    }
+
+    button {
+        width: 50%; /* Los botones ocuparán todo el ancho en móviles */
+    }
+}
